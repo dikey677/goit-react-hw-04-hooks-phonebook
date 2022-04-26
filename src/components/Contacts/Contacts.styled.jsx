@@ -31,18 +31,15 @@ export const Li = styled.li`
 display: flex;
 justify-content: center;
 align-items: center;
-
 `
 
 export const Button = styled.button`
 width: 70px;
 height: 30px;
 border-radius: 20px
-
 `
 
 export const P = styled.p`
 margin-right: 30px;
-
 `
 

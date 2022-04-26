@@ -1,7 +1,7 @@
 import React from "react";
 import {Ul, Li, Box, Button, P} from "../Contacts/Contacts.styled"
 
-const Contacts = ({ contacts, removeContact }) => {
+export default function Contacts({ contacts, removeContact }) {
     return (
             <Box>
                 <Ul>
@@ -18,5 +18,5 @@ const Contacts = ({ contacts, removeContact }) => {
     );
 }
 
-export default Contacts
+
 

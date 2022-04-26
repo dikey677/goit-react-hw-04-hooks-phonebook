@@ -1,4 +1,4 @@
-const Filter = ({value, onChange}) => {
+export default function Filter({value, onChange}) {
     return (
         <label>
             <p>Find contacts by name</p>
@@ -7,4 +7,3 @@ const Filter = ({value, onChange}) => {
     );
 }
 
-export default Filter
