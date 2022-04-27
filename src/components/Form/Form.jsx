@@ -1,9 +1,13 @@
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import { FormBox, InputName, InputNumber } from "./Form.styled";
 
 export default function Form({onSubmit}) {
-  const [name, setName] = useState('')
-  const [number, setNumber] = useState('')
+  const [name, setName] = useState(() => {
+    return JSON.parse(window.localStorage.getItem('name')) ?? ''
+  });
+  const [number, setNumber] = useState(() => {
+    return JSON.parse(window.localStorage.getItem('number')) ?? ''
+  });
 
   const handleChangeName = event => {
     setName(event.currentTarget.value)
@@ -21,6 +25,15 @@ export default function Form({onSubmit}) {
     setName('')
     setNumber('')
   }
+
+  useEffect(() => {
+    window.localStorage.setItem('name', JSON.stringify(name))
+  }, [name])
+  
+  useEffect(() => {
+    window.localStorage.setItem('number', JSON.stringify(number))
+  },[number])
+
 
   return (
       <FormBox onSubmit={handleSubmit}>
