@@ -39,12 +39,6 @@ export default function App() {
     setContacts(prevState => prevState.filter(contact => contact.id !== index))
   }
 
-  // useEffect(() => {
-  //   window.localStorage.setItem('contacts', JSON.stringify(contacts))
-  //   const parseContacts = JSON.parse(window.localStorage.getItem('contacts'))
-  //   setContacts(parseContacts)
-  // }, [contacts])
-
   return (
       <section>
         <Title title='Phonebook' />
